@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد الشتوي</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            transition: background-color 0.5s, color 0.5s;
+            color: #000000;
+        }
+        .coming-soon {
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .control-panel {
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .color-picker {
+            margin-top: 10px;
+        }
+        .background-controls {
+            right: 20px;
+        }
+        .text-controls {
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="coming-soon">
+        <h1>سيتم افتتاح الموقع قريبًا</h1>
+        <h1>Coming Soon</h1>
+    </div>
+
+    <!-- أداة اختيار لون الخلفية -->
+    <div class="control-panel background-controls">
+        <p>اختر الخلفية</p>
+        <input type="color" class="color-picker" value="#f0f0f0" onchange="changeBackgroundColor(this.value)">
+    </div>
+
+    <!-- أداة اختيار لون النص -->
+    <div class="control-panel text-controls">
+        <p>اختر لون النص</p>
+        <input type="color" class="color-picker" value="#000000" onchange="changeTextColor(this.value)">
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        
+        function changeTextColor(color) {
+            document.body.style.color = color;
+        }
+    </script>
+</body>
+</html>
